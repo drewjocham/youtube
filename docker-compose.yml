@@ -1,0 +1,7 @@
+version: '3'
+services:
+  personal-view:
+    build: .
+    image: personal-view:v1
+    ports:
+      - "8000:8000"
