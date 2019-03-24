@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: personal-site
+spec:
+  containers:
+    - name: personal-site
+      image: personal-site
+      args:
+        - sleep
+        - "1000000"
+
