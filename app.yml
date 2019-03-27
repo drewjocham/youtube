@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment
+  name: personal-site
 spec:
   selector:
     matchLabels:
@@ -11,8 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        app: metrics
-        department: sales
+        app: personal
     spec:
       containers:
         - name: personal-site
