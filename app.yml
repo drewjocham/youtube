@@ -1,12 +1,23 @@
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: personal-site
+  name: my-deployment
 spec:
-  containers:
-    - name: personal-site
-      image: personal-site
-      args:
-        - sleep
-        - "1000000"
+  selector:
+    matchLabels:
+      app: metrics
+      department: sales
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: metrics
+        department: sales
+    spec:
+      containers:
+        - name: personal-site
+          args:
+            - sleep
+            - "1000000"
+          image: "gcr.io/personal-site-206007/personal-view"
 
