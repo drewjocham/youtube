@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: metrics
+      app: personal
       department: sales
   replicas: 3
   template:
